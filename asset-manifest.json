@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Fake-API-Project/static/css/main.300e01b2.css",
+    "main.js": "/Fake-API-Project/static/js/main.fbb3c1d2.js",
+    "static/js/787.2c9cba1a.chunk.js": "/Fake-API-Project/static/js/787.2c9cba1a.chunk.js",
+    "index.html": "/Fake-API-Project/index.html",
+    "main.300e01b2.css.map": "/Fake-API-Project/static/css/main.300e01b2.css.map",
+    "main.fbb3c1d2.js.map": "/Fake-API-Project/static/js/main.fbb3c1d2.js.map",
+    "787.2c9cba1a.chunk.js.map": "/Fake-API-Project/static/js/787.2c9cba1a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.300e01b2.css",
+    "static/js/main.fbb3c1d2.js"
+  ]
+}
