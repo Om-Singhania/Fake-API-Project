@@ -1,24 +1,48 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
+  const [fakeAPI, setFakeAPI] = useState([]);
+  console.log(fakeAPI);
+
+  useEffect(() => {
+    omStore();
+  }, [])
+
+
+  const omStore = async () => {
+    const omResponse = await fetch('https://fakestoreapi.com/products')
+    console.log(omResponse);
+    const jsonData = await omResponse.json();
+    console.log(jsonData);
+    setFakeAPI(jsonData);
+  }
+  // omStore();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+
+
+      {/* https://fakestoreapi.com/products/1 */}
+      <section className="fake_section">
+        <div className="container">
+          <h1>Fake API Store</h1>
+          <div className="box">
+            {fakeAPI.map((values) => {
+              return (
+                <>
+                  <div className="content">
+                    <h4>{values.title}</h4>
+                    <p>{values.description}</p>
+                    <img src={values.image} alt="" />
+                  </div>
+                </>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
 
